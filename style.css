@@ -4,7 +4,7 @@ html, body {
 }
 
 a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: #000000;
 	font-weight: bold;
 }
@@ -100,6 +100,8 @@ div#footer {
 
 div#content {
 	text-align: center;
+	width: 600px;
+	margin: auto;
 }
 
 div#content img {
@@ -109,12 +111,6 @@ div#content img {
 div#legacy-link {
 	clear: both;
 	float: right;
-}
-
-div#legacy-link a {
-	font-weight: normal;
-	text-decoration: underline;
-	color: #666;
 }
 
 div#facebook-like {

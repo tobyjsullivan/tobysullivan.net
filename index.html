@@ -71,7 +71,7 @@
 <meta name="google-site-verification" content="kqCCOsgyOvwiYyPuckjKDg46exODt7r0g7G_Vok37ag" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Toby Sullivan, Vancouver, Canada</title>
-<meta name="description" content="Toby Sullivan is a twenty-something Vancouverite defining the meaning of awesomeness." />
+<meta name="description" content="I help your employees focus on what they are good at to minimize their stress and maximize your return on investment." />
 <meta property="og:image" content="http://www.tobysullivan.net/fb_thumb.png" /> 
 <meta property="og:type" content="website" /> 
 <meta property="og:title" content="Toby Sullivan" /> 
@@ -94,11 +94,12 @@
   })();
 
 </script>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
-function togglePortfolio()
-{
-	var portfolio = document.getElementById("portfolio");
-	portfolio.style.display = portfolio.style.display == "block" ? "none" : "block";
+function showContactDetails() {
+  $('#contact-info').show();
+  $('#email').html('tobyjsullivan'+'@'+'gmail.com');
+  $('#phone').html('+1 '+'778'+'-688-'+'1639');
 }
 </script>
 <script src="http://www.tobysullivan.net/countdown/countdown.js"></script>
@@ -126,43 +127,24 @@ function showCounter()
 <div id="page">
 <div id="main-navigation">
 <ul>
-<!--
-<li><a href="http://about.me/tobyjsullivan">About.me</a></li>
--->
 <li><a href="http://linkd.in/tobyjsullivan">LinkedIn</a></li>
 <li><a href="http://www.twitter.com/tobyjsullivan">Twitter</a></li>
 </ul>
 </div>
-<!--
-<div id="portfolio-nav">
-<p><a href="javascript:togglePortfolio();">Things I've Done</a> <img src="new_item.png" /></p>
-<div id="portfolio">
-<ul>
-<li><a href="http://yogaconnect.co">YogaConnect</a> <img src="new_item.png" /></li>
-<li><a href="http://appworld.blackberry.com/webstore/vendor/9517?lang=en">BlackBerry Apps</a></li>
-<li><a href="http://www.jonflash.com">Jonny Flash</a></li>
-<li><a href="http://tubmlr.ca">I, Canada (tumblr.ca)</a></li>
-</ul>
-</div>
-</div>
--->
-<!--
-<div id="legacy-link">
-<p><small><a href="http://wonder-tonic.com/geocitiesizer/content.php?theme=2&amp;music=2&amp;url=tobysullivan.net" label="Transformation courtesy of http://wonder-tonic.com/geocitiesizer">Revert to old version of site</a></small></p>
-</div>
--->
 <div id="header"></div>
 <div id="content">
-<div id="take-off-counter" style="display: none;">
-<p><strong>Countdown to Awesomeness:</strong>
-<script type="text/javascript"><!--
-deadline("2012-6-29-16-0-0");
-// --></script>
-</p>
-</div>
-<p><img src="./slideset.gif" alt="Toby Sullivan" width="900" /></p>
+  <img id="photo" src="toby_sullivan.jpg" alt="Toby Sullivan" />
 <h1>Toby Sullivan</h1>
-<p>great hair. awesome guy.</p>
+<p>You hire your employees because they are the best at what they do. Unfortunately, 
+they are forced to waste tmie every day on tasks that are not their specialty. You
+are here because you know there's a way to reduce this wasted time.</p>
+<h3>I help your employees focus on what they are good at to minimize their stress and 
+  maximize your return on investment.</h3>
+<p><a href="javascript:showContactDetails();">Let's start talking today</a></p>
+<div id="contact-info" style="display: none;">
+<p>Email: <span id="email"></span></p>
+<p>Phone: <span id="phone"></span></p>
+  </div>
 </div>
 <div id="facebook-like">
 <div id="fb-root"></div>
@@ -176,21 +158,8 @@ deadline("2012-6-29-16-0-0");
 <div class="fb-like" data-href="http://www.tobysullivan.net" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </div>
 <div id="footer">
-<div id="counter" style="display: none;"><!-- Hidden since the graphic doesn't load properly half the time. Still including in code to preserve counting until proper replacement found. -->
-<p>Page hits since August 19th, 2010!</p>
-<table width="133" border="0" cellspacing="0" cellpadding="3" class="counter">
-<tbody>
-<tr>
-<td align="center"><a href="http://www.website-hit-counters.com/" target="_blank"><img src="http://www.website-hit-counters.com/cgi-bin/image.pl?URL=427778-3169" alt="website-hit-counters.com" title="website-hit-counters.com" border="0" /></a></td>
-</tr>
-<tr>
-<td align="center"><span style="font-size: 9px; text-decoration: none;">Provided by <a href="http://www.website-hit-counters.com" target="_blank" style="font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 9px; color: #555556; text-decoration: none;" title="website-hit-counters.com">website-hit-counters.com</a> site.</span></td>
-</tr>
-</tbody>
-</table>
-</div>
 <div id="copyright">
-<p>&copy; All copyrights for this site belong to Toby Sullivan. All inquiries can be directed to Toby Sullivan via <a href="http://www.facebook.com/tobyjsullivan">Facebook</a>.</p>
+<p>&copy; All copyrights for this site belong to Toby Sullivan.</p>
 </div>
 </div>
 </div>
