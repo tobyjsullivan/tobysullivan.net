@@ -97,8 +97,24 @@
 <script type="text/javascript">
 function showContactDetails() {
   $('#contact-info').show();
-  $('#email').html('tobyjsullivan'+'@'+'gmail.com');
-  $('#phone').html('+1 '+'778'+'-688-'+'1639');
+  var em = [
+  "74", "6f", "62", "79",
+  "6a", "73", "75", "6c",
+  "6c", "69", "76", "61",
+  "6e", "40", "67", "6d",
+  "61", "69", "6c", "2e",
+  "63", "6f", "6d"
+  ];
+
+  var emEnc = '';
+  em.forEach(function(ch) {
+    emEnc += '%'+ch;
+  });
+  em = decodeURIComponent(emEnc);
+  $('#email').html(em);
+  var pn = "" + ((Math.pow(2, 20) - (243 * 301)) * 7983);
+  var pnFmt = pn.substr(0,3) + '-' + pn.substr(3,3) + '-' + pn.substr(6,4);
+  $('#phone').html('+1 '+pnFmt);
 }
 </script>
 </head>
