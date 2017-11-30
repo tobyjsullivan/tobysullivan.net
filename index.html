@@ -112,9 +112,6 @@ function showContactDetails() {
   });
   em = decodeURIComponent(emEnc);
   $('#email').html(em);
-  var pn = "" + ((Math.pow(2, 20) - (243 * 301)) * 7983);
-  var pnFmt = pn.substr(0,3) + '-' + pn.substr(3,3) + '-' + pn.substr(6,4);
-  $('#phone').html('+1 '+pnFmt);
 }
 </script>
 </head>
@@ -135,10 +132,9 @@ function showContactDetails() {
 <h1>Toby Sullivan</h1>
 <h3>#Hacker</h3>
 <p></p>
-<p>Wanna talk? <a href="https://calendly.com/tobyjsullivan">Schedule something</a> or <a href="javascript:showContactDetails();">get in touch.</a></p>
+<p>Wanna talk? <a href="javascript:showContactDetails();">Get in touch.</a></p>
 <div id="contact-info" style="display: none;">
     <p>Email: <span id="email"></span></p>
-    <p>Phone: <span id="phone"></span></p>
   </div>
 </div>
 <div id="footer">
