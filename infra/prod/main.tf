@@ -12,6 +12,7 @@ variable "cloudflare_token" {}
 module "website" {
   source = "../common/"
   env = "production"
+  region = "us-west-2"
   domain = "tobysullivan.net"
   cloudflare_domain = "tobysullivan.net"
   cloudflare_email = "${var.cloudflare_email}"

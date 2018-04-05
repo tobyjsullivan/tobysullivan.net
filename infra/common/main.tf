@@ -9,9 +9,12 @@ variable "cloudflare_domain" {
 variable "env" {
   default = "production"
 }
+variable "region" {
+  default = "us-west-2"
+}
 
 provider "aws" {
-  region = "us-west-2"
+  region = "${var.region}"
 }
 
 provider "cloudflare" {
