@@ -9,12 +9,25 @@ terraform {
 variable "cloudflare_email" {}
 variable "cloudflare_token" {}
 
+provider "aws" {
+  region = "us-west-2"
+}
+
+provider "cloudflare" {
+  email = "${var.cloudflare_email}"
+  token = "${var.cloudflare_token}"
+}
+
 module "website" {
   source = "../common/"
   env = "production"
-  region = "us-west-2"
   domain = "tobysullivan.net"
   cloudflare_domain = "tobysullivan.net"
   cloudflare_email = "${var.cloudflare_email}"
   cloudflare_token = "${var.cloudflare_token}"
 }
+
+output "s3_bucket" {
+  value = "${module.website.s3_bucket}"
+}
+

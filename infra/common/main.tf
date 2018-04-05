@@ -9,18 +9,6 @@ variable "cloudflare_domain" {
 variable "env" {
   default = "production"
 }
-variable "region" {
-  default = "us-west-2"
-}
-
-provider "aws" {
-  region = "${var.region}"
-}
-
-provider "cloudflare" {
-  email = "${var.cloudflare_email}"
-  token = "${var.cloudflare_token}"
-}
 
 resource "aws_s3_bucket" "website" {
   bucket = "${var.domain}"
