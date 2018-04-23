@@ -1,10 +1,16 @@
 variable "domain" {
   default = "tobysullivan.net"
 }
+variable "alt_domain" {
+  default = "tobyjsullivan.com"
+}
 variable "cloudflare_email" {}
 variable "cloudflare_token" {}
 variable "cloudflare_domain" {
   default = "tobysullivan.net"
+}
+variable "cloudflare_alt_domain" {
+  default = "tobyjsullivan.com"
 }
 variable "env" {
   default = "production"
@@ -52,6 +58,22 @@ resource "cloudflare_record" "root" {
 resource "cloudflare_record" "www" {
   domain = "${var.cloudflare_domain}"
   name = "www.${var.domain}"
+  value = "${cloudflare_record.root.hostname}"
+  type = "CNAME"
+  proxied = true
+}
+
+resource "cloudflare_record" "alt_root" {
+  domain = "${var.cloudflare_alt_domain}"
+  name = "${var.alt_domain}"
+  value = "${cloudflare_record.root.hostname}"
+  type = "CNAME"
+  proxied = true
+}
+
+resource "cloudflare_record" "alt_www" {
+  domain = "${var.cloudflare_alt_domain}"
+  name = "www.${var.alt_domain}"
   value = "${cloudflare_record.root.hostname}"
   type = "CNAME"
   proxied = true

@@ -22,7 +22,9 @@ module "website" {
   source = "../common/"
   env = "production"
   domain = "tobysullivan.net"
+  alt_domain = "tobyjsullivan.com"
   cloudflare_domain = "tobysullivan.net"
+  cloudflare_alt_domain = "tobyjsullivan.com"
   cloudflare_email = "${var.cloudflare_email}"
   cloudflare_token = "${var.cloudflare_token}"
 }
