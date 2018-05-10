@@ -18,7 +18,6 @@ variable "env" {
 
 resource "aws_s3_bucket" "website" {
   bucket = "${var.domain}"
-  acl = "public-read"
   force_destroy = "${var.env != "production"}"
   policy = <<EOF
 {
@@ -28,7 +27,7 @@ resource "aws_s3_bucket" "website" {
             "Effect": "Allow",
             "Principal": "*",
             "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::${var.domain}/*"
+            "Resource": ["arn:aws:s3:::${var.domain}/*"]
         }
     ]
 }
